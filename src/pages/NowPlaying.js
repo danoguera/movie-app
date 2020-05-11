@@ -9,6 +9,8 @@ function Movies({ movies }){
                 return(
                     <div className="movie" key={movie.id}>
                         <h2>{movie.title}</h2>
+                        <p>{movie.release_date}</p>
+                        <p>{movie.original_language}</p>
                         <p>{movie.overview}</p>
                     </div>
                 )
