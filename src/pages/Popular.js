@@ -8,6 +8,7 @@ function Movies({ movies }){
             {movies && movies.length > 0 && movies.map(movie => {
                 return(
                     <div className="movie" key={movie.id}>
+                        <h2>{movie.title}</h2>
                         <p>{movie.release_date}</p>
                         <p>{movie.original_language}</p>
                         <p>{movie.overview}</p>

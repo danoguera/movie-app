@@ -8,6 +8,7 @@ function Movies({ movies }){
             {movies && movies.length > 0 && movies.map(movie => {
                 return(
                     <div className="movie" key={movie.id}>
+                        <h2>{movie.title}</h2>
                         <p>{movie.release_date}</p>
                         <p>{movie.original_language}</p>
                         <p>{movie.overview}</p>
@@ -27,7 +28,7 @@ class Upcoming extends React.Component{
 
     componentDidMount(){
         axios({
-            url: 'https://api.themoviedb.org/3/movie/now_playing?api_key=33b038077774615fe7300cdbc6edd93c&language=en-US&page=1',
+            url: 'https://api.themoviedb.org/3/movie/upcoming?api_key=33b038077774615fe7300cdbc6edd93c&language=en-US&page=1',
             method: 'GET'
         })
         .then((response) => {
